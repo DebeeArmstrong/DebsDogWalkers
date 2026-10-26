@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Accessibility Controls & Theme Overrides
+   ========================================================================== */
+
+/* Toolbar Styling */
+.a11y-toolbar {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.a11y-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.a11y-label {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.a11y-toolbar button {
+  background: #ffffff;
+  color: #0f172a;
+  border: 2px solid #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 0.15 ease, background-color 0.15s ease;
+}
+
+.a11y-toolbar button:hover,
+.a11y-toolbar button:focus {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  outline: 2px solid #ffffff;
+}
+
+/* --- Dynamic Font Size Overrides --- */
+html[data-font-size="large"] {
+  font-size: 115%; /* Increases base font from 20px to ~23px */
+}
+
+html[data-font-size="xlarge"] {
+  font-size: 130%; /* Increases base font from 20px to ~26px */
+}
+
+/* --- High Contrast Theme Overrides (Yellow on Pure Black) --- */
+html[data-theme="high-contrast"] {
+  --color-primary: #ffff00;
+  --color-primary-hover: #ffffff;
+  --color-secondary: #00ffff;
+  --color-text-dark: #ffff00;
+  --color-bg-light: #000000;
+  --color-bg-white: #000000;
+  --color-border: #ffff00;
+}
+
+html[data-theme="high-contrast"] body {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+html[data-theme="high-contrast"] section,
+html[data-theme="high-contrast"] header,
+html[data-theme="high-contrast"] .service-card,
+html[data-theme="high-contrast"] address {
+  background-color: #000000 !important;
+  border: 3px solid #ffff00 !important;
+  color: #ffff00 !important;
+}
+
+html[data-theme="high-contrast"] a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+/* --- Dark Mode Theme Overrides --- */
+html[data-theme="dark"] {
+  --color-primary: #60a5fa;
+  --color-secondary: #2dd4bf;
+  --color-text-dark: #f8fafc;
+  --color-bg-light: #0f172a;
+  --color-bg-white: #1e293b;
+  --color-border: #334155;
+}
+
+html[data-theme="dark"] body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] section,
+html[data-theme="dark"] header,
+html[data-theme="dark"] .service-card {
+  background-color: #1e293b;
+  border-color: #334155;
+}
