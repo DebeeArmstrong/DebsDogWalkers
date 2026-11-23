@@ -106,3 +106,22 @@ html[data-theme="dark"] .service-card {
   background-color: #1e293b;
   border-color: #334155;
 }
+/* Style for all company images */
+.company-image {
+    width: 100%;             /* Makes the image scale with the screen width */
+    max-width: 500px;        /* Prevents images from getting too massive on desktop */
+    height: auto;            /* Maintains original proportions so images don't stretch */
+    border-radius: 10px;     /* Rounds the corners nicely for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle soft shadow */
+    display: block;
+    margin: 20px auto;       /* Centers the image horizontally with spacing */
+}
+
+/* Container styling for neat layout blocks */
+.image-container {
+    text-align: center;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
